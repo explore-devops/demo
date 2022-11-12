@@ -36,18 +36,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-      </plugin>
 		</plugins>
 	</build>
 	
-	<distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://165.22.221.196:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
 
 </project>
