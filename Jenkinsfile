@@ -10,5 +10,8 @@ node {
                             "-Dsonar.pullrequest.branch=${env.CHANGE_BRANCH} " +
                             "-Dsonar.pullrequest.base=${env.CHANGE_TARGET}"
     }
+	timeout(time: 1, unit: 'MINUTES') {
+            waitForQualityGate abortPipeline: true
+        }
   }
 }
