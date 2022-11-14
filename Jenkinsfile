@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def mvn = tool 'Default Maven';
+    def mvn = tool 'maven';
     withSonarQubeEnv() {
       sh "${mvn}/bin/mvn sonar:sonar " +
 	                    "-Dsonar.branch.name=${env.BRANCH_NAME} " +  
