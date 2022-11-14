@@ -5,7 +5,6 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
-      sh "${mvn}/bin/mvn sonar:sonar"
       sh "${mvn}/bin/mvn sonar:sonar " +
                             "-Dsonar.pullrequest.key=${env.CHANGE_ID} " +
                             "-Dsonar.pullrequest.branch=${env.CHANGE_BRANCH} " +
